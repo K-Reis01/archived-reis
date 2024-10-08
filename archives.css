@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 60px 5%;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+i {
+  cursor: pointer;
+}
+
+header {
+    padding: 0px 4% 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid white;
+}
+
+header img {
+    width: 60%;
+}
+
+header button {
+    position: relative;
+    left: 60px;
+    bottom: 70px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* From Uiverse.io by andrei0x309 */ 
+section.content {
+    display: flex;
+    position: relative;
+    top: 15px;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    background-color: black;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 7.5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 0.9rem;
+  }
+  
+  .value {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: aliceblue;
+    display: flex;
+    position: relative;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .value:not(:active):hover,
+  .active,
+  .value:focus {
+    background-color: #21262cad;
+  }
+  
+  .value:focus,
+  .value:active {
+    background-color: #1a1f24;
+    outline: none;
+  }
+  
+  .value::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #0a01303f;
+    border-radius: 5px;
+    opacity: 0;
+  }
+  
+  .value:focus::before,
+  .value:active::before {
+    opacity: 1;
+  }
+
+  /* MAIN */
+
+  .tittle{
+    padding: 20px 4% 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 27px;
+  }
+
+  .tittle h2 {
+    position: relative;
+    font-weight: 100;
+    top: 30px;
+  }
+
+  section.cards,.feed {
+    padding: 20px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    background-color: black;
+    color: white;
+    top: 70px;
+  }
+
+  section.feed {
+    padding: 20px 4% 60px;
+  }
+
+  section .border {
+    padding: 20px 3% 40px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+  }
+  
+  section .card-wrapper, .feed-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px 4%;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+section .card-item button {
+    color: white;
+    user-select: none;
+}
+
+section .card-item, .feed-item {
+    height: 350px;
+    width: 350px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+section .card-item img, .feed-item img{
+    padding: 20px 0 0px;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    user-select: none;
+    position: relative;
+}
+
+section .files {
+  height: 150px;
+  width: 150px;
+}
+
+section .card-item .icon-files{
+  width: 150px;
+  height: 150px;
+}
+
+section .about .info-files {
+  text-align: center;
+}
+
+.about button {
+    margin: 40px 0 20px;
+    padding: 13px 30px;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.about {
+    padding: 35px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+    text-align: inherit;
+}
+
+.about p {
+    font-size: 20px;
+}
+
+.info-feed {
+  padding: 30px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.info-feed p {
+  padding: 0px 4%;
+  position: absolute;
+  left: 0;
+}
+
+.info-feed p span {
+  color: rgb(187, 14, 71);
+}
+
+.info-feed a {
+  padding: 0px 4%;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  color: rgb(187, 14, 71);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* From Uiverse.io by G4b413l */ 
+.buttonDownload {
+    display: inline-block;
+    position: relative;
+    padding: 10px 25px;
+    background-color: #4CC713;
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 15px;
+    border: none;
+   }
+   
+   .buttonDownload:hover {
+    background-color: #45a21a;
+    color: white;
+   }
+   
+   .buttonDownload:before, .buttonDownload:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 52%;
+   }
+   
+   .buttonDownload:before {
+    width: 10px;
+    height: 2px;
+    border-style: solid;
+    border-width: 0 2px 2px;
+   }
+   
+   .buttonDownload:after {
+    width: 0;
+    height: 0;
+    margin-left: 3px;
+    margin-top: -7px;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: transparent;
+    border-top-color: inherit;
+    animation: downloadArrow 1s linear infinite;
+    animation-play-state: paused;
+   }
+   
+   .buttonDownload:hover:before {
+    border-color: #cdefbd;
+   }
+   
+   .buttonDownload:hover:after {
+    border-top-color: #cdefbd;
+    animation-play-state: running;
+   }
+   
+   @keyframes downloadArrow {
+    0% {
+     margin-top: -7px;
+     opacity: 1;
+    }
+   
+    0.001% {
+     margin-top: -15px;
+     opacity: 0.4;
+    }
+   
+    50% {
+     opacity: 1;
+    }
+   
+    100% {
+     margin-top: 0;
+     opacity: 0.4;
+    }
+   }
+
+
+   /* FOOTER */
+
+   footer {
+    padding: 90px 4% 20px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   }
+
+   footer .copy p {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+   }
+
+   footer .copy button {
+    font-size: 20px;
+   }
+
+
+   /* DESKTOP */
+
+   @media screen and (min-width: 450px) {
+    section .info-feed p {
+      margin-left: 18%;
+    }
+
+    section .info-feed a {
+      margin-right: 18%;
+    }
+   }
+
+   @media screen and (min-width: 900px) {
+    section .info-feed p {
+      margin-left: 26%;
+    }
+
+    section .info-feed a {
+      margin-right: 26%;
+    }
+   }
+
+   @media screen and (min-width: 1290px) {
+    section .info-feed p {
+      margin-left: 30%;
+    }
+
+    section .info-feed a {
+      margin-right: 30%;
+    }
+   }
